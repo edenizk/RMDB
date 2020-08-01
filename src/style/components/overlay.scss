@@ -1,0 +1,91 @@
+.overlay  {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  background-color: $cDarkGrey;
+  color: $cWhite;
+  overflow: hidden;
+  z-index: 100;
+
+  &__image {
+    width: 500px;
+    height: 500px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: #f5deb3;
+    font-size: 36px;
+  }
+
+  &__content {
+    width: calc(100% - 550px);   
+    height: 100%;
+    margin-left: 50px;
+    
+    text-align: initial;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    font-size: 48px;
+  }
+
+  &__status {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+
+    &--Dead {
+      background-color: #ff0000;
+    }
+
+    &--Alive {
+      background-color: #adff2f;
+    }
+
+    &--unknown {
+      background-color: #808080;
+    }
+  }
+
+  &__episodesTitle {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 48px;
+  }
+
+  &__episodeList {
+    width: 100%;
+    height: inherit;
+    max-height: 600px;
+    margin-top: 60px;
+    overflow: auto;
+  }
+
+  &__episode {
+    & + & {
+      margin-top: 20px;
+    }
+  }
+
+  &__episodeNumber {
+    margin-bottom: 10px;
+  }
+
+  &__episodeName {
+    padding-left: 10px;
+  }
+  
+}
